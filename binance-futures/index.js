@@ -5,7 +5,7 @@ let isOpened = false;
 const api = require("./api");
 
 ws.onmessage = (event) => {
-    process.stdout.write('\033c');
+    console.clear();
     const obj = JSON.parse(event.data);
     console.log(`Symbol: ${obj.s}`);
     console.log(`Mark Price: ${obj.p}`);
